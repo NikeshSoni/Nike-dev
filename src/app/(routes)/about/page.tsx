@@ -4,7 +4,6 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { ResumeCard } from "@/components/resume-card";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
-// import viseosCode  form "../"
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -13,13 +12,12 @@ export default function About() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5; // Set to 0.5 for half-speed playback
+      videoRef.current.playbackRate = 0.5;
     }
   }, []);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-
       <div className="flex justify-start">
         <div className="relative w-[50%] h-0 pb-[28.125%] sm:pb-[28.125%]">
           <video
@@ -30,7 +28,7 @@ export default function About() {
             muted
           >
             <source src="/new-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+               Your browser does not support the video tag.
           </video>
         </div>
       </div>
@@ -68,7 +66,6 @@ export default function About() {
           ))}
         </div>
       </section>
-
     </main>
   );
 }
