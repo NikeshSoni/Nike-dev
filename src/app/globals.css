@@ -4,9 +4,18 @@
 
 
 body{
-  /* background: linear-gradient(to right, #a8a1d1, #dcd9f8, #cde3ea); */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  @apply text-black transition-colors duration-300;
+  background-color: #fbeed9 !important;
+}
 
+.dark body {
+  background-color: #000 !important;
+  color: #fff;
+}
+
+.bg-card{
+  padding: 8px 10px;
 }
 
 @layer base {

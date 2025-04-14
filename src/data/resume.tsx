@@ -11,7 +11,7 @@ export const DATA = {
     "MERN Stack Developer skilled in MongoDB, Express.js, React, and Node.js. Builds responsive, scalable web apps with clean code. Passionate about performance, teamwork, and delivering full-stack solutions in agile teams.",
   summary:
     "Hi, I'm Nikesh a dedicated MERN Stack Developer with hands-on experience in building full-stack web apps using MongoDB, Express.js, React.js, and Node.js. I enjoy creating fast, responsive, and user-friendly websites. From building APIs to designing clean interfaces, I love every part of the development process. When I'm not coding, I'm exploring new technologies, working on side projects",
-  avatarUrl: "/me.jpeg",
+  avatarUrl: "/me.png",
   skills: [
     "React",
     "Next.js",
@@ -97,7 +97,7 @@ export const DATA = {
   education: [
     {
       school: "Mahatama Night Degree Collage",
-      href: "https://buildspace.so",
+      href: "https://www.mahatmandc.ac.in/",
       degree: "Bachelor's Degree B-com",
       logoUrl: "/images-collage.jpeg",
       start: "2022",
@@ -105,7 +105,7 @@ export const DATA = {
     },
     {
       school: "Mahatama Night Junior Collage",
-      href: "https://uwaterloo.ca",
+      href: "https://www.mahatmandc.ac.in/",
       degree: "12th HSC Commerce",
       logoUrl: "/images-collage.jpeg",
       start: "2020",
@@ -113,13 +113,15 @@ export const DATA = {
     },
     {
       school: "Lal bahadur shastri night high schooly",
-      href: "https://wlu.ca",
+      href: "",
       degree: "10th SSC Board",
       logoUrl: "/school-logo.avif",
       start: "2019",
       end: "2020",
     }
   ],
+
+  
   projects: [
     {
       title: "Chat Collect",

@@ -1,106 +1,79 @@
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+"use client"
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
+import { MoonIcon, SunIcon, HomeIcon } from "@radix-ui/react-icons";
+import { useRouter, usePathname } from "next/navigation";
 
-// Icons
-import { Home, FileText, Github, Linkedin } from "lucide-react";
-import { DATA } from "@/data/resume";
-
-// Data
-// const DATA = {
-//   navbar: [
-//     { href: "/", icon: Home, label: "Home" },
-//     { href: "/about", icon: FileText, label: "About" },
-//   ],
-//   contact: {
-//     social: {
-//       GitHub: {
-//         url: "https://github.com/yourhandle",
-//         icon: Github,
-//         navbar: true,
-//       },
-//       LinkedIn: {
-//         url: "https://linkedin.com/in/yourprofile",
-//         icon: Linkedin,
-//         navbar: true,
-//       },
-//     },
-//   },
-// };
 
 export default function Navbar() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const activeTheme = storedTheme || (prefersDark ? "dark" : "light");
+    setIsDark(activeTheme === "dark");
+    document.documentElement.classList.toggle("dark", activeTheme === "dark");
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = isDark ? "light" : "dark";
+    setIsDark(!isDark);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+
+
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-5 z-30 mx-auto flex h-16 w-full max-w-4xl px-4">
-      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-[10px] shadow-md">
-        {DATA.navbar.map((item) => (
-          <DockIcon key={item.href}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
-                  )}
-                >
-                  <item.icon className="size-4" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{item.label}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
+    <nav
+      className={`fixed top-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full shadow-md backdrop-blur-lg border z-50 flex items-center space-x-6
+      bg-white/80 border-neutral-200
+      dark:bg-[#b1b4b7] dark:border-[#b1b4b7]`}
+    >
+      <Link href="/" className="hover:text-black dark:hover:text-white">
+        <HomeIcon className="w-5 h-5" />
+      </Link>
+      <Link href="/about" className="text-sm font-medium">About</Link>
+      <Link href="/projects" className="text-sm font-medium">Projects</Link>
+      <Link href="/blogs" className="text-sm font-medium">Blogs</Link>
+      <Link href="/reach" className="text-sm font-medium">Reach</Link>
+
+      {/* <div className="hidden md:flex space-x-6">
+        {[
+          { name: "Home", href: "/" },
+          { name: "about", href: "/about" },
+          { name: "projects", href: "/projects" },
+          { name: "blogs", href: "/blogs" },
+          { name: "reach", href: "/reach" },
+        ].map(({ name, href }) => (
+          <Link
+            key={href}
+            href={href}
+            onClick={() => {
+              router.push(href);
+            }}
+            className="text-sm font-medium"
+          >
+            {name}
+          </Link>
         ))}
+      </div> */}
 
-        <Separator orientation="vertical" className="h-full" />
-
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-
-        <Separator orientation="vertical" className="h-full py-2" />
-
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
-      </Dock>
-    </div>
+      <button
+        onClick={toggleTheme}
+        className="ml-2 p-2 rounded-full transition-all hover:bg-neutral-200 dark:hover:bg-[#a6a9ad]"
+      >
+        {isDark ? (
+          <MoonIcon className="w-4 h-4 text-white" />
+        ) : (
+          <SunIcon className="w-4 h-4 text-black" />
+        )}
+      </button>
+    </nav>
   );
 }
