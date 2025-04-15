@@ -1,10 +1,20 @@
-"use client"
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { MoonIcon, SunIcon, HomeIcon } from "@radix-ui/react-icons";
+import {
+  MoonIcon,
+  SunIcon,
+  HomeIcon,
+  PersonIcon,
+  DashboardIcon,
+  ReaderIcon,
+  ImageIcon
+} from "@radix-ui/react-icons";
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -22,30 +32,53 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
+  // Active button style
+  const activeStyle =
+    "bg-[#fef1dc] shadow-[inset_0_0_6px_rgba(0,0,0,0.2)] text-black";
+
+  const navItemClasses = (path) =>
+    `flex items-center gap-2 px-3 py-1 rounded-full transition hover:bg-white/20 dark:hover:bg-white/20 ${
+      pathname === path ? activeStyle : ""
+    }`;
+
   return (
     <nav
-      className={`fixed bottom-10 sm:top-6 sm:bottom-auto left-1/2 -translate-x-1/2 px-4 py-2 rounded-full shadow-md z-50 flex items-center space-x-6
-      backdrop-blur-md bg-white/30 border border-neutral-200
-      dark:backdrop-blur-xl dark:bg-black/30 dark:border-[#b1b4b7]`}
+      className="fixed bottom-10 sm:top-6 sm:bottom-auto left-1/2 -translate-x-1/2 px-6 py-2 rounded-full shadow-lg backdrop-blur-md
+      bg-white/20 border border-white/30 dark:bg-white/10 dark:border-white/20 z-50 flex items-center space-x-4 text-sm text-black dark:text-white"
     >
-
-
-      <Link href="/" className="hover:text-black dark:hover:text-white">
-        <HomeIcon className="w-5 h-5" />
+      <Link href="/" className={navItemClasses("/")}>
+        <HomeIcon className="w-4 h-4" />
+        <span className="hidden sm:inline">Home</span>
       </Link>
-      <Link href="/about" className="text-sm font-medium">About</Link>
-      <Link href="/projects" className="text-sm font-medium">Projects</Link>
-      <Link href="/blogs" className="text-sm font-medium">Blogs</Link>
-      <Link href="/reach" className="text-sm font-medium">Reach</Link>
+
+      <Link href="/about" className={navItemClasses("/about")}>
+        <PersonIcon className="w-4 h-4" />
+        <span className="hidden sm:inline">About</span>
+      </Link>
+
+      <Link href="/projects" className={navItemClasses("/projects")}>
+        <DashboardIcon className="w-4 h-4" />
+        <span className="hidden sm:inline">Work</span>
+      </Link>
+
+      <Link href="/blogs" className={navItemClasses("/blogs")}>
+        <ReaderIcon className="w-4 h-4" />
+        <span className="hidden sm:inline">Blog</span>
+      </Link>
+
+      <Link href="/gallery" className={navItemClasses("/gallery")}>
+        <ImageIcon className="w-4 h-4" />
+        <span className="hidden sm:inline">Gallery</span>
+      </Link>
 
       <button
         onClick={toggleTheme}
-        className="ml-2 p-2 rounded-full transition-all hover:bg-neutral-200 dark:hover:bg-[#a6a9ad]"
+        className="ml-2 p-2 rounded-full hover:bg-white/20 dark:hover:bg-white/20 transition"
       >
         {isDark ? (
-          <MoonIcon className="w-4 h-4 text-white" />
+          <MoonIcon className="w-4 h-4" />
         ) : (
-          <SunIcon className="w-4 h-4 text-black" />
+          <SunIcon className="w-4 h-4" />
         )}
       </button>
     </nav>
