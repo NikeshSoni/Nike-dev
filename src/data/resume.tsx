@@ -11,8 +11,6 @@ import alogic from "../../public/alogic.png"
 import icici from "../../public/icici.png"
 import docsGoogle from "../../public/docs-google.png"
 
-// import video from "../../public/google-docs.mp4";
-
 
 export const DATA = {
   name: "Nikesh Rajbhar",
@@ -255,7 +253,6 @@ data interaction across the platform.`,
       image: alogic,
       video: "",
     },
-
     {
       title: "icici Bank ",
       href: "https://nikeshsoni.github.io/icici/",
