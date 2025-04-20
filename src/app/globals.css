@@ -119,10 +119,6 @@ body {
   }
 }
 
-/* h3 code {
-  @apply !text-lg md: !text-xl;
-} */
-
 pre {
   @apply !px-0 rounded-lg overflow-x-auto py-4
 }
@@ -186,4 +182,85 @@ code[data-line-numbers-max-digits="2"]>[data-line]::before {
 
 code[data-line-numbers-max-digits="3"]>[data-line]::before {
   width: 3rem;
+}
+
+
+.skills-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 20px;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  color: #333;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  min-width: fit-content;
+}
+
+/* Animation styles */
+@keyframes marquee1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes marquee3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-animate-1 {
+  animation: marquee1 20s linear infinite;
+}
+
+.marquee-animate-2 {
+  animation: marquee2 25s linear infinite;
+}
+
+.marquee-animate-3 {
+  animation: marquee3 30s linear infinite;
 }

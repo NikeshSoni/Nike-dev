@@ -19,7 +19,7 @@ export default function About() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <div className="flex justify-start">
-        <div className="relative w-[50%] h-0 pb-[28.125%] sm:pb-[28.125%]">
+        <div className="relative w-[100%] h-0 pb-[38.125%] sm:pb-[38.125%]">
           <video
             ref={videoRef}
             className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
