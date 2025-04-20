@@ -36,7 +36,7 @@ export default function Navbar() {
   const activeStyle =
     "bg-[#fef1dc] shadow-[inset_0_0_6px_rgba(0,0,0,0.2)] text-black";
 
-  const navItemClasses = (path) =>
+  const navItemClasses = (path : string) =>
     `flex items-center gap-2 px-3 py-1 rounded-full transition hover:bg-white/20 dark:hover:bg-white/20 ${
       pathname === path ? activeStyle : ""
     }`;
