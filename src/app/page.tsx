@@ -8,11 +8,7 @@ import { DATA } from "@/data/resume";
 import SkillsCode from "./skill"
 
 const BLUR_FADE_DELAY = 0.04;
-interface Props {
-  // ... other props
-  image?: string; // Allow both string paths and StaticImageData
-  // ... other props
-}
+
 
 export default function Page() {
   return (
@@ -115,12 +111,14 @@ export default function Page() {
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
-                  image={project.image}
+                  image={project.imageData}
                   video={project.video}
                   links={project.links}
                 />
               </BlurFade>
             ))}
+
+
           </div>
         </div>
       </section>
