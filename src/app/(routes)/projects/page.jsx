@@ -8,46 +8,44 @@ const BLUR_FADE_DELAY = 0.04;
 const Projects = () => {
     return (
         <section id="projects">
-            <div className="flex flex-col space-y-12 w-full py-12">
+            <div className="space-y-12 w-full py-12">
                 <BlurFade delay={BLUR_FADE_DELAY * 11}>
                     <div className="flex flex-col items-center justify-center space-y-4 text-center">
                         <div className="space-y-2">
                             <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                                My Projects
+                                Featured Projects
                             </div>
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                                Check out my latest work
+                                Explore My Recent Creations
                             </h2>
                             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                I&apos;ve worked on a variety of projects, from simple
-                                websites to complex web applications. Here are a few of my
-                                favorites.
+                                From intuitive UIs to robust backend systems, I’ve built a range of projects that showcase my skills and passion for development.
+                            </p>
+                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                Dive deeper on the <a className="text-blue-500 hover:underline" href="/">Home</a> to see all detail.
                             </p>
                         </div>
                     </div>
                 </BlurFade>
-
-                {/* <div className="flex"> */}
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 max-w-[800px] mx-auto">
-                        {DATA.projects.map((project, id) => (
-                            <BlurFade
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+                    {DATA.projects.map((project, id) => (
+                        <BlurFade
+                            key={project.title}
+                            delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                        >
+                            <ProjectCard
+                                href={project.href}
                                 key={project.title}
-                                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                            >
-                                <ProjectCard
-                                    href={project.href}
-                                    key={project.title}
-                                    title={project.title}
-                                    description={project.description}
-                                    dates={project.dates}
-                                    tags={project.technologies}
-                                    image={project.image}
-                                    video={project.video}
-                                    links={project.links}
-                                />
-                            </BlurFade>
-                        ))}
-                    {/* </div> */}
+                                title={project.title}
+                                description={project.description}
+                                dates={project.dates}
+                                tags={project.technologies}
+                                image={project.imageData}
+                                video={project.video}
+                                links={project.links}
+                            />
+                        </BlurFade>
+                    ))}
                 </div>
             </div>
         </section>

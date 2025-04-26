@@ -264,3 +264,12 @@ code[data-line-numbers-max-digits="3"]>[data-line]::before {
 .marquee-animate-3 {
   animation: marquee3 30s linear infinite;
 }
+
+
+.bg-card {
+  background-color: transparent;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+              0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border-radius: 1rem; /* rounded-2xl = 16px */
+  padding: 1rem;
+}
