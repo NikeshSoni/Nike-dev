@@ -102,9 +102,8 @@ export default function Page() {
           </BlurFade>
           {DATA.work.map((work, id) => (
 
-            <div className="" >
+            <div key={id}>
               <BlurFade
-                key={work.company}
                 delay={BLUR_FADE_DELAY * 6 + id * 0.05}
               >
                 <ResumeCard
@@ -160,7 +159,7 @@ export default function Page() {
                 </div>
                 <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
                     {dataStore.map((project, id) => (
-                        <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
+                        <BlurFade key={id} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
                             <ProjectCard
                                 href={project.href}
                                 title={project.title}
@@ -194,25 +193,6 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          {/* <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade> */}
         </div>
       </section>
 
