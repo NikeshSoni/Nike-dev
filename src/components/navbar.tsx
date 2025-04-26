@@ -1,16 +1,17 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
-  MoonIcon,
-  SunIcon,
-  HomeIcon,
-  PersonIcon,
-  DashboardIcon,
-  ReaderIcon,
-  ImageIcon
-} from "@radix-ui/react-icons";
+  Home,
+  User,
+  LayoutDashboard,
+  BookOpen,
+  Image,
+  Sun,
+  Moon
+} from "lucide-react";
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
@@ -32,11 +33,10 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  // Active button style
   const activeStyle =
     "bg-[#fef1dc] shadow-[inset_0_0_6px_rgba(0,0,0,0.2)] text-black";
 
-  const navItemClasses = (path : string) =>
+  const navItemClasses = (path: string) =>
     `flex items-center gap-2 px-3 py-1 rounded-full transition hover:bg-white/20 dark:hover:bg-white/20 ${
       pathname === path ? activeStyle : ""
     }`;
@@ -47,27 +47,27 @@ export default function Navbar() {
       bg-white/20 border border-white/30 dark:bg-white/10 dark:border-white/20 z-50 flex items-center space-x-4 text-sm text-black dark:text-white"
     >
       <Link href="/" className={navItemClasses("/")}>
-        <HomeIcon className="w-4 h-4" />
+        <Home className="w-4 h-4" />
         <span className="hidden sm:inline">Home</span>
       </Link>
 
       <Link href="/about" className={navItemClasses("/about")}>
-        <PersonIcon className="w-4 h-4" />
+        <User className="w-4 h-4" />
         <span className="hidden sm:inline">About</span>
       </Link>
 
       <Link href="/projects" className={navItemClasses("/projects")}>
-        <DashboardIcon className="w-4 h-4" />
+        <LayoutDashboard className="w-4 h-4" />
         <span className="hidden sm:inline">Work</span>
       </Link>
 
-      <Link href="/blogs" className={navItemClasses("/blogs")}>
-        <ReaderIcon className="w-4 h-4" />
+      {/* <Link href="/blogs" className={navItemClasses("/blogs")}>
+        <BookOpen className="w-4 h-4" />
         <span className="hidden sm:inline">Blog</span>
-      </Link>
+      </Link> */}
 
       <Link href="/gallery" className={navItemClasses("/gallery")}>
-        <ImageIcon className="w-4 h-4" />
+        <Image className="w-4 h-4" />
         <span className="hidden sm:inline">Gallery</span>
       </Link>
 
@@ -76,9 +76,9 @@ export default function Navbar() {
         className="ml-2 p-2 rounded-full hover:bg-white/20 dark:hover:bg-white/20 transition"
       >
         {isDark ? (
-          <MoonIcon className="w-4 h-4" />
+          <Moon className="w-4 h-4" />
         ) : (
-          <SunIcon className="w-4 h-4" />
+          <Sun className="w-4 h-4" />
         )}
       </button>
     </nav>

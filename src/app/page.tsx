@@ -9,7 +9,6 @@ import SkillsCode from "./skill"
 
 const BLUR_FADE_DELAY = 0.04;
 
-
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -34,31 +33,30 @@ export default function Page() {
         </div>
       </section>
 
-
       <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-3 p-3">
+        <div className="flex min-h-0 flex-col gap-y-3 p-3 ">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
-
           {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-
-            >
-              <ResumeCard
+            <div key={id}>
+              <BlurFade
                 key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
-            </BlurFade>
+                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+              >
+                <ResumeCard
+                  key={work.company}
+                  logoUrl={work.logoUrl}
+                  altText={work.company}
+                  title={work.company} 
+                  subtitle={work.title}
+                  href={work.href}
+                  badges={work.badges}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  description={work.description}
+                /> 
+              </BlurFade>
+            </div>
           ))}
         </div>
       </section>
@@ -74,9 +72,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-
-
 
       <section id="projects">
         <div className="space-y-12 w-full py-12">
@@ -117,8 +112,6 @@ export default function Page() {
                 />
               </BlurFade>
             ))}
-
-
           </div>
         </div>
       </section>
@@ -173,9 +166,9 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+              {/* <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
-              </div>
+              </div> */}
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
