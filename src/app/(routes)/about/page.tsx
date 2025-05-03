@@ -18,6 +18,13 @@ export default function About() {
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+        <div className="">
+          <h1 className="text-4xl font-bold">Yo, I'm Nikesh Rajbhar 🚀</h1>
+          <p className="text-lg font-normal mt-2 text-gray-800">
+            Welcome to my decentralized zone. Stoked you found your way here!
+          </p>
+        </div>
+
       <div className="flex justify-start">
         <div className="relative w-[100%] h-0 pb-[38.125%] sm:pb-[38.125%]">
           <video
@@ -32,16 +39,6 @@ export default function About() {
           </video>
         </div>
       </div>
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
-      </section>
 
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -65,6 +62,17 @@ export default function About() {
             </BlurFade>
           ))}
         </div>
+      </section>
+
+      <section id="about">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <h2 className="text-xl font-bold">About</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {DATA.summary}
+          </Markdown>
+        </BlurFade>
       </section>
     </main>
   );

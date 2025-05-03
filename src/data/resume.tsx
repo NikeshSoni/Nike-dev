@@ -49,7 +49,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "hello@example.com",
@@ -116,7 +116,7 @@ data interaction across the platform.`,
       title: "Next.js Developer ",
       logoUrl: "https://project-ambulance.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLogo.2ed2a8bf.png&w=256&q=75",
       start: "March 2025",
-      end: "under construction",
+      end: "Apr 2025",
       description:
         "Tech Stack: Next.js, Tailwind CSS, shadcn/ui Designed and developed a fully responsive ambulance service website from scratch using Next.js and Tailwind CSS.Integrated shadcn/ ui components to ensure a clean, modern UI / UX.The platform enables fast access to emergency services, showcases service details, and includes optimized performance for mobile and desktop users.",
     },

@@ -61,14 +61,9 @@ export default function Navbar() {
         <span className="hidden sm:inline">Work</span>
       </Link>
 
-      {/* <Link href="/blogs" className={navItemClasses("/blogs")}>
+      <Link href="/blogs" className={navItemClasses("/blogs")}>
         <BookOpen className="w-4 h-4" />
         <span className="hidden sm:inline">Blog</span>
-      </Link> */}
-
-      <Link href="/gallery" className={navItemClasses("/gallery")}>
-        <Image className="w-4 h-4" />
-        <span className="hidden sm:inline">Gallery</span>
       </Link>
 
       <button

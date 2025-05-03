@@ -7,11 +7,12 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   @apply text-black transition-colors duration-300;
   background-color: #fbeed9 !important;
+
 }
 
 .dark body {
   background-color: #000 !important;
-  color: #fff;
+  color: #fff !important;
   z-index: 0;
 }
 
