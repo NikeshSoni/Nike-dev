@@ -63,7 +63,7 @@ const Blogpage = () => {
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">📲 Let’s Connect!</h2>
       <p className="mb-2">
-        I'm open to freelance opportunities, collaborative projects, or full-time roles that challenge me to grow. You can find my work at:
+        I m open to freelance opportunities, collaborative projects, or full-time roles that challenge me to grow. You can find my work at:
       </p>
       <ul className="list-disc list-inside mb-6">
         <li><a className="text-blue-600 underline" href="https://github.com/NikeshSoni" target="_blank" rel="noopener noreferrer">GitHub</a></li>

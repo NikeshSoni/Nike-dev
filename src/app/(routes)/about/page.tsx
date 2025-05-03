@@ -19,7 +19,7 @@ export default function About() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
         <div className="">
-          <h1 className="text-4xl font-bold">Yo, I'm Nikesh Rajbhar 🚀</h1>
+        <h1 className="text-4xl font-bold">Yo, I&apos;m Nikesh Rajbhar 🚀</h1>
           <p className="text-lg font-normal mt-2 text-gray-800">
             Welcome to my decentralized zone. Stoked you found your way here!
           </p>
@@ -29,7 +29,7 @@ export default function About() {
         <div className="relative w-[100%] h-0 pb-[38.125%] sm:pb-[38.125%]">
           <video
             ref={videoRef}
-            className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+            className="absolute top-0 left-0 w-full h-[300px] object-cover rounded-lg"
             autoPlay
             loop
             muted
@@ -41,7 +41,7 @@ export default function About() {
       </div>
 
       <section id="education">
-        <div className="flex min-h-0 flex-col gap-y-3">
+        <div className="flex mt-3 min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
