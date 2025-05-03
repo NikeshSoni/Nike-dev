@@ -29,7 +29,7 @@ export default function About() {
         <div className="relative w-[100%] h-0 pb-[38.125%] sm:pb-[38.125%]">
           <video
             ref={videoRef}
-            className="absolute top-0 left-0 w-full h-[300px] object-cover rounded-lg"
+            className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
             autoPlay
             loop
             muted

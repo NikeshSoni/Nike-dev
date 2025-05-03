@@ -3,7 +3,7 @@ import React from 'react';
 const Blogpage = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">
+     <h1 className="text-2xl md:text-2xl font-bold mb-4">
         🚀 From Freelance Projects to Full-Stack Innovation: My Journey as a MERN Developer
       </h1>
 
