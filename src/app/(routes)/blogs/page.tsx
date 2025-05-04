@@ -65,7 +65,7 @@ const BlogPage = () => {
 
       <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800">📖 Commitment to Continuous Learning</h2>
       <p className="text-sm sm:text-base mb-4 text-gray-700 leading-relaxed">
-        Holding a Bachelor of Commerce degree from Mahatma Night Degree College, I've complemented my formal education with rigorous self-directed technical training. 
+        Holding a Bachelor of Commerce degree from Mahatma Night Degree College, Ive complemented my formal education with rigorous self-directed technical training. 
         This includes staying current with emerging JavaScript frameworks, cloud technologies, and even expanding my professional toolkit with language skills including Japanese. 🌐📘
       </p>
 
@@ -80,7 +80,7 @@ const BlogPage = () => {
       </ul>
 
       <p className="text-sm sm:text-base text-gray-700 italic">
-        🙏 I appreciate your time reviewing my professional journey. For project inquiries or technical discussions, please don't hesitate to reach out.
+        🙏 I appreciate your time reviewing my professional journey. For project inquiries or technical discussions, please dont hesitate to reach out.
       </p>
     </div>
   );
