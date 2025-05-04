@@ -93,7 +93,7 @@ export const DATA = {
         "Pre-Authorization Analyst at Infinx with experience in checking insurance coverage, getting approvals for medical procedures, and reducing delays. Skilled in working with doctors and insurance companies to make the process smooth and accurate. Knowledgeable in medical terms, insurance rules, and health record systems.",
     },
     {
-      company: "Lot Management ( 3 Month Freelance )",
+      company: "Asian Elevators Control & Automation",
       href: "https://www.infinx.com/",
       badges: [],
       location: "Remote & on site",
