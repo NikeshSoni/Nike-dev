@@ -3,20 +3,20 @@ import React from 'react';
 const BlogPage = () => {
   return (
     <div className="p-4 sm:p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
         🚀 From Freelance Development to Full-Stack Excellence: My Professional Journey as a MERN Developer
       </h1>
 
-      <p className="text-sm sm:text-base mb-4 text-gray-700 leading-relaxed">
+      <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
         My name is <strong>Nikesh Rajbhar</strong>, a dedicated MERN Stack Developer with a passion for creating robust, scalable web applications. 💻
       </p>
-      <p className="text-sm sm:text-base mb-4 text-gray-700 leading-relaxed">
+      <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
         My technical journey began at <strong>Navodaya Academy</strong> and has evolved through hands-on experience across various domains of web development, 
         from crafting responsive interfaces to architecting full-stack solutions. 🛠️
       </p>
 
-      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800">📈 Career Progression and Technical Growth</h2>
-      <p className="text-sm sm:text-base mb-4 text-gray-700 leading-relaxed">
+      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800 dark:text-white">📈 Career Progression and Technical Growth</h2>
+      <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
         <strong>Enterprise Iot Management System</strong> (Freelance Project) ⚙️<br />
         Modernized the platform architecture using React, Material UI, and GraphQL, resulting in improved data management workflows 
         and a 40% reduction in UI rendering times. ⚡
@@ -25,8 +25,8 @@ const BlogPage = () => {
         further enhanced my analytical capabilities and attention to detail—qualities that now inform my approach to software architecture and problem-solving. 🧠
       </p>
 
-      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800">🏆 Notable Projects and Technical Achievements</h2>
-      <ul className="list-disc list-inside text-sm sm:text-base mb-4 space-y-3 text-gray-700">
+      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800 dark:text-white">🏆 Notable Projects and Technical Achievements</h2>
+      <ul className="list-disc list-inside text-sm sm:text-base mb-4 space-y-3 text-gray-700 dark:text-white">
         <li className="leading-relaxed">
           <strong>Neel Ambulance Service Platform 🚑</strong><br />
           Developed a high-performance, responsive website using Next.js and Tailwind CSS with <code>shadcn/ui</code> components, 
@@ -52,34 +52,34 @@ const BlogPage = () => {
         </li>
       </ul>
 
-      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800">🧠 Development Philosophy</h2>
-      <p className="text-sm sm:text-base mb-4 text-gray-700 leading-relaxed">
+      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800 dark:text-white">🧠 Development Philosophy</h2>
+      <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
         I approach software development as a blend of technical precision and creative problem-solving. My work emphasizes:
       </p>
-      <ul className="list-disc list-inside text-sm sm:text-base mb-4 space-y-1 text-gray-700">
+      <ul className="list-disc list-inside text-sm sm:text-base mb-4 space-y-1 text-gray-700 dark:text-white">
         <li>🧼 Clean, maintainable code with comprehensive documentation</li>
         <li>⚡ Performance-optimized solutions with measurable impact</li>
         <li>🧭 Intuitive user interfaces grounded in UX principles</li>
         <li>🏗️ Scalable architecture patterns for future growth</li>
       </ul>
 
-      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800">📖 Commitment to Continuous Learning</h2>
-      <p className="text-sm sm:text-base mb-4 text-gray-700 leading-relaxed">
+      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800 dark:text-white">📖 Commitment to Continuous Learning</h2>
+      <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
         Holding a Bachelor of Commerce degree from Mahatma Night Degree College, Ive complemented my formal education with rigorous self-directed technical training. 
         This includes staying current with emerging JavaScript frameworks, cloud technologies, and even expanding my professional toolkit with language skills including Japanese. 🌐📘
       </p>
 
-      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800">🤝 Professional Engagement</h2>
-      <p className="text-sm sm:text-base mb-2 text-gray-700 leading-relaxed">
+      <h2 className="text-lg sm:text-2xl font-semibold mt-6 mb-2 text-gray-800 dark:text-white">🤝 Professional Engagement</h2>
+      <p className="text-sm sm:text-base mb-2 text-gray-700 dark:text-white leading-relaxed">
         I welcome opportunities for meaningful collaboration on challenging projects. My work and professional background can be explored through these channels:
       </p>
-      <ul className="list-disc list-inside text-sm sm:text-base mb-6 space-y-1 text-gray-700">
-        <li>🔗 <a className="text-blue-600 hover:text-blue-800 transition-colors underline" href="https://github.com/NikeshSoni" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a></li>
-        <li>🔗 <a className="text-blue-600 hover:text-blue-800 transition-colors underline" href="https://www.linkedin.com/in/nikesh-rajbhar-13a20824b" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
-        <li>🔗 <a className="text-blue-600 hover:text-blue-800 transition-colors underline" href="https://project-ambulance.vercel.app/" target="_blank" rel="noopener noreferrer">Project Showcase</a></li>
+      <ul className="list-disc list-inside text-sm sm:text-base mb-6 space-y-1 text-gray-700 dark:text-white">
+        <li>🔗 <a className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors underline" href="https://github.com/NikeshSoni" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a></li>
+        <li>🔗 <a className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors underline" href="https://www.linkedin.com/in/nikesh-rajbhar-13a20824b" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+        <li>🔗 <a className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors underline" href="https://project-ambulance.vercel.app/" target="_blank" rel="noopener noreferrer">Project Showcase</a></li>
       </ul>
 
-      <p className="text-sm sm:text-base text-gray-700 italic">
+      <p className="text-sm sm:text-base text-gray-700 dark:text-white italic">
         🙏 I appreciate your time reviewing my professional journey. For project inquiries or technical discussions, please dont hesitate to reach out.
       </p>
     </div>

@@ -83,6 +83,20 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
+
+              <div className="">
+              <p>Seeking a challenging position in a reputable organization to expand an dutilizemy
+              learning skills and knowledge.</p>
+                        <a
+                            href="/NikeshRajbhar.pdf"
+                            download
+                            className="inline-flex mt-3 items-center gap-2 rounded-lg px-4 py-1 
+                                      text-xs font-semibold bg-transparent border border-blue-500 text-blue-600 
+                                      hover:bg-blue-50 active:scale-95 
+                                      transition-all duration-200" >
+                            Download CV
+                          </a>
+              </div>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-40 border">

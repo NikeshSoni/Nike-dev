@@ -1,59 +1,16 @@
-// import BlurFade from "@/components/magicui/blur-fade";
-// import { getBlogPosts } from "@/data/blog";
-// import Link from "next/link";
+import React from 'react';
 
-// export const metadata = {
-//   title: "Blog",
-//   description: "My thoughts on software development, life, and more.",
-// };
-
-// const BLUR_FADE_DELAY = 0.04;
-
-// export default async function BlogPage() {
-//   const posts = await getBlogPosts();
-
-//   return (
-//     <section>
-//       <BlurFade delay={BLUR_FADE_DELAY}>
-//         <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
-//       </BlurFade>
-//       {posts
-//         .sort((a, b) => {
-//           if (
-//             new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-//           ) {
-//             return -1;
-//           }
-//           return 1;
-//         })
-//         .map((post, id) => (
-//           <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
-//             <Link
-//               className="flex flex-col space-y-1 mb-4"
-//               href={`/blog/${post.slug}`}
-//             >
-//               <div className="w-full flex flex-col">
-//                 <p className="tracking-tight">{post.metadata.title}</p>
-//                 <p className="h-6 text-xs text-muted-foreground">
-//                   {post.metadata.publishedAt}
-//                 </p>
-//               </div>
-//             </Link>
-//           </BlurFade>
-//         ))}
-//     </section>
-//   );
-// }
-
-import React from 'react'
-
-const page = () => {
+const BlogPage = () => {
   return (
-    <div>
-      
+    <div className="p-4 sm:p-6 max-w-4xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
+        Blog
+      </h1>
+      <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
+        Welcome to my blog. Check out my latest posts and thoughts on web development.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default page
-
+export default BlogPage;
