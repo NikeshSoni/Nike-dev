@@ -26,7 +26,6 @@
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-markdown": "^9.0.1",
-    "react-spring-carousel": "^2.0.19",
     "rehype-pretty-code": "^0.14.1",
     "rehype-stringify": "^10.0.0",
     "remark-gfm": "^4.0.1",
