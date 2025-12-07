@@ -4,11 +4,11 @@ const BlogPage = () => {
   return (
     <div className="p-4 sm:p-6 max-w-4xl mx-auto">
       <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
-        🚀 From Freelance Development to Full-Stack Excellence: My Professional Journey as a MERN Developer
+        🚀 From Freelance Development to Full-Stack Excellence: My Professional Journey as a Full Developer
       </h1>
 
       <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
-        My name is <strong>Nikesh Rajbhar</strong>, a dedicated MERN Stack Developer with a passion for creating robust, scalable web applications. 💻
+        My name is <strong>Nikesh Rajbhar</strong>, a dedicated Full Stack Developer with a passion for creating robust, scalable web applications. 💻
       </p>
       <p className="text-sm sm:text-base mb-4 text-gray-700 dark:text-white leading-relaxed">
         My technical journey began at <strong>Navodaya Academy</strong> and has evolved through hands-on experience across various domains of web development, 
@@ -33,7 +33,7 @@ const BlogPage = () => {
           focusing on optimal user experience and accessibility for emergency medical services.
         </li>
         <li className="leading-relaxed">
-          At <strong>EazyByts Web Solutions</strong>, I engineered full-stack applications utilizing the MERN stack (MongoDB, Express.js, React, and Node.js), 
+          At <strong>EazyByts Web Solutions</strong>, I engineered full-stack applications utilizing the Full stack (MongoDB, Express.js, React, and Node.js), 
           implementing RESTful APIs and optimizing database performance. ⚙️
         </li>
         <li className="leading-relaxed">
